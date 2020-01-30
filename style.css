@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
+/* Beide devices */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 2em;
+}
+
+header, aside {
+    background-color: rgba(180, 220, 255, 0.5);
+}
+
+h1, h3 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1, .tagline {
+    color: #47a;
+}
+
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 0.5em;
+    padding-bottom: 0.2em;
+}
+
+.nummer {
+    background-color: #47a;
+    color: #fff;
+    font-size: 3em;
+    width: 	1.2em;
+    text-align: right;
+    padding: 0.2em;
+}
+
+section img {
+    max-width: 100%;
+}
+
+article {
+    padding: 1em;
+}
+
+aside h3 {
+    background-color: #47a;
+    padding: 2em 0;
+    color: #fff;
+    text-align: right;
+}
+
+aside a {
+    text-decoration: none;
+    padding: 2em 1em;
+    display: block;
+    color: #47a;
+    transition: background-color 1s, color 0.5s, letter-spacing 1s;
+    text-align: right;
+}
+
+aside a:hover {
+    transition: background-color 1s, color 0.5s, letter-spacing 1s;
+    background-color: #47a;
+    color: #fff;
+    letter-spacing: 4px;
+    text-align: right;
+}
+
+footer {
+    background-color: #333;
+    color: #eee;
+    padding: 2em;
+}
+
+/* ! Grotere devices */
+@media screen and (min-width: 760px){
+    .afb {
+        display: block;
+        background-image: url("../img/rokengroot.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "kop kop"
+        "tip1 tip2"
+        "tip3 tip4"
+        "tip3 tip5"
+        "afb tip6"
+        "tip7 aside"
+        "tip8 aside"
+        "tip9 aside"
+        "tip10 aside"
+        "voet voet";
+    }
+
+    header {
+        grid-area: kop;
+    }
+
+    .sporten {
+        grid-area: tip1;
+    }
+
+    .kauwgum {
+        grid-area: tip2;
+    }
+
+    .tanden {
+        grid-area: tip3;
+    }
+
+    .eten {
+        grid-area: tip4;
+    }
+
+    .doelen {
+        grid-area: tip5;
+    }
+
+    .stress {
+        grid-area: tip6;
+    }
+
+    .afleiding {
+        grid-area: tip7;
+    }
+
+    .alcohol {
+        grid-area: tip8;
+    }
+
+    .lichaam {
+        grid-area: tip9;
+    }
+
+    .vervanger {
+        grid-area: tip10;
+    }
+
+    .afb {
+        grid-area: afb;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    footer {
+        grid-area: voet;
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    .voordeel_article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .voordeel_article h3 {
+        grid-column: span 2;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "kop kop kop"
+        "tip1 tip2 afb"
+        "tip3 tip4 afb"
+        "tip3 tip5 afb"
+        "aside tip6 tip6"
+        "aside tip7 tip8"
+        "aside tip9 tip10"
+        "aside voet voet";
+    }
+}
